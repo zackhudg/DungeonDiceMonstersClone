@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="app.js"></script>
+    </head>
+    <div class='main'>
+        <div class='navbar'>DUNGEON DICE MONSTERS WOOO</div>
+        <div class='flexbox'>
+            <div class='board_view'>
+                <div class='strategic_view'>                    
+                </div>
+                <div class='player topleft'>
+                    <div class='username'>User 1</div>
+                    <div class='profile_picture'></div>
+                </div>
+                <div class='player bottomright'>
+                    <div class='username'>User 2</div>
+                    <div class='profile_picture'></div>
+                </div>
+            </div>
+
+            <div class='control'>
+                <div class='filter_select'>
+                    <div class='monster_or_crest'>
+                        Roll for:
+                    </div>
+                    <div class='select_container'>
+                        <span>
+                            <button class='toggle_filter_button' id='filter_btn_monster_1' value='monster_filter_select_1'>Monsters</button>
+                            <select class='filter_select_1 monster_select'  id='monster_filter_select_1'>
+                                <option class='monster'></option>
+                                <!-- 
+                                    foreach die left in pool - name of monster
+                                    class=monster, hidden
+                                -->
+                            </select>
+                            <select class='filter_select_1' id='crest_filter_select_1'>
+                                <option class='crest'></option>
+                                <option class='crest' value='MOV'>Movement</option>
+                                <option class='crest' value='ATK'>Attack</option>
+                                <option class='crest' value='DEF'>Defense</option>
+                                <option class='crest' value='MAG'>Magic</option>
+                                <option class='crest' value='TRA'>Trap</option>                     
+                            </select>
+                            <button class='toggle_filter_button' id='filter_btn_crest_1' value='crest_filter_select_1'>Crests</button>
+                        </span>
+
+                        <span>
+                            <button class='toggle_filter_button' id='filter_btn_monster_2' value='monster_filter_select_2'>Monsters</button>
+                            <select class='filter_select_2 monster_select' id='monster_filter_select_2'>
+                                <option class='monster'></option>
+                                <!-- 
+                                    foreach die left in pool - name of monster
+                                    class=monster, hidden
+                                -->
+                            </select>
+                            
+                            <select class='filter_select_2' id='crest_filter_select_2'>
+                                <option class='crest'></option>
+                                <option class='crest' value='MOV'>Movement</optin>
+                                <option class='crest' value='ATK'>Attack</option>
+                                <option class='crest' value='DEF'>Defense</optio>
+                                <option class='crest' value='MAG'>Magic</option>
+                                <option class='crest' value='TRA'>Trap</option>                    
+                            </select>
+                            <button class='toggle_filter_button' id='filter_btn_crest_2' value='crest_filter_select_2'>Crests</button>
+                        </span>
+                    <button id='filter'>FILTER</button>
+                </div>
+                <div class='manual_select'>
+                    <div>Select Manually:</div>
+                    <form class='monster_select_container'>
+                        <select class='monster_select'>
+                            <option class='monster'></option>
+                            <!-- 
+                                foreach die left in pool - name of monster
+                                class=monster, hidden
+                            -->
+                        </select>
+                        <select class='monster_select'>
+                            <option class='monster'></option>
+                            <!-- 
+                                foreach die left in pool - name of monster
+                                class=monster, hidden
+                            -->
+                        </select>
+                        <select class='monster_select'>
+                            <option class='monster'></option>
+                            <!-- 
+                                foreach die left in pool - name of monster
+                                class=monster, hidden
+                            -->
+                        </select>
+                    </div>
+                </div>
+                <button id='roll'>ROLL!</button>
+            </div>
+
+        </div>
+    </div>
+</html>
