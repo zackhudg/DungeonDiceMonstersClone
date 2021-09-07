@@ -1,3 +1,6 @@
+//This is the first iteration. After realizing it was bad, I've moved into a more OO approach. Haven't removed/restructured this yet, but will eventually do that.
+
+//TODO:replace all this crap
 document.addEventListener('DOMContentLoaded', () => {
     
     const strategicView = document.querySelector('.strategic_view');

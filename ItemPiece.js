@@ -1,0 +1,3 @@
+class ItemPiece extends PlaceablePiece {
+    
+}

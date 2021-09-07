@@ -3,11 +3,11 @@ export const dicedex = {
         "name":"Blue-Eyes White Dragon",
         "type":"dragon",
         "level":4,
-        "hp":50,
-        "attack":40,
-        "defense":30,
+        "hp":5,
+        "attack":4,
+        "defense":3,
         "ability_text":"Flying",
-        "sides":[
+        "faces":[
             "MOV 1",
             "MOV 2",
             "ATK 4",
@@ -20,11 +20,11 @@ export const dicedex = {
         "name":"Mystical Elf",
         "type":"spellcaster",
         "level":1,
-        "hp":20,
-        "attack":10,
-        "defense":20,
-        "ability_text":"Restores 10HP to all allies upon summoning",
-        "sides":[
+        "hp":2,
+        "attack":1,
+        "defense":2,
+        "ability_text":"Restores 1HP to all allies upon summoning",
+        "faces":[
             "MOV 2",
             "MAG 4"
         ]
@@ -33,11 +33,11 @@ export const dicedex = {
         "name":"Hitotsu-Me Giant",
         "type":"beast",
         "level":2,
-        "hp":10,
-        "attack":20,
-        "defense":10,
+        "hp":1,
+        "attack":2,
+        "defense":1,
         "ability_text":"",
-        "sides":[
+        "faces":[
             "ATK 2",
             "DEF 2",
             "MAG 1"
@@ -47,11 +47,11 @@ export const dicedex = {
         "name":"Baby Dragon",
         "type":"dragon",
         "level":1,
-        "hp":10,
-        "attack":10,
-        "defense":10,
+        "hp":1,
+        "attack":1,
+        "defense":1,
         "ability_text":"Flying. Immune to class-specific effects",
-        "sides":[
+        "faces":[
             "ATK 1",
             "MAG 1"
         ],
