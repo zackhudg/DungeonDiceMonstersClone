@@ -165,7 +165,7 @@ class PlaceablePiece extends BoardPiece{
                 //TODO
                 pass;
         }
-        this.place(row, column, board, rotation, relativeTilePlacementCoordinates);
+        this.placeSurroundingTiles(row, column, board, rotation, relativeTilePlacementCoordinates);
     }
     
     summon(row, column, board, pieceLayoutId){
