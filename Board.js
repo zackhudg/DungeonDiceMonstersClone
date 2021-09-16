@@ -20,4 +20,10 @@ class Board {
     getTile(row, column){
         return this.tiles[row][column];
     }
+
+    setTileIsPath(row, column){
+        let tile = board.getTile(row, column); 
+        tile.setIsPath(true);
+    }
+    
 }

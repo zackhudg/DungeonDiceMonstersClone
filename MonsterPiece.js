@@ -7,6 +7,7 @@ class MonsterPiece extends PlaceablePiece {
         //want to do recusive here. 
         movableTiles = new Set();
         checkedTiles = new Set();
+        
         function getMovableTilesHelper(numMoveCrests, movableTiles, checkedTiles){ //TODO: optimize?
             currentTile = getTile(this.row, this.column);
 
@@ -35,4 +36,5 @@ class MonsterPiece extends PlaceablePiece {
 
         return getMovableTilesHelper(numMoveCrests, movableTiles);
     }
+
 }

@@ -14,6 +14,17 @@ class Tile {
     }
 
     //TODO: enforce good args?
+    getIsOccupied(boolean){ 
+        return this.setIsOccupied;
+    }
+
+    getIsPath(boolean){ 
+        return this.setIsPath;
+    }
+
+    getOccupyingPiece(piece){
+        return this.occupyingPiece;
+    }
 
     setIsOccupied(boolean){ 
         this.setIsOccupied = boolean;

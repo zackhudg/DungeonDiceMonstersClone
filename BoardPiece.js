@@ -13,7 +13,8 @@ class BoardPiece {
         this.column = column;
 
         let tile = board.getTile(row, column); 
-        tile.isOccupied = true;
+        tile.setIsPath(true);
+        tile.setIsOccupied(true);
         tile.occupyingPiece = this;
     }
 
