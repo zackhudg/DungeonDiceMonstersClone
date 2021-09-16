@@ -1,16 +1,6 @@
 class PlaceablePiece extends BoardPiece{
 
-
-    //can just use the .this values? no need to send args?
-    place0(row, column, board, rotation){ //cross layout
-        let relativeTilePlacementCoordinates = [
-            [-1, 0],
-            [1, 0],
-            [0, -1],
-            [0, 1],
-            [2, 0]
-        ]
-
+    placeSurroundingTiles(row, column, board, rotation, relativeTilePlacementCoordinates){
         function multiplyMatrices(matrix1, matrix2){ //assumes M1 = ixj array, M2 = jxk array. TODO: bad parameter handling?
             let productMatrix = [];
             for(let i = 0; i < matrix1.length; i++){
@@ -64,23 +54,118 @@ class PlaceablePiece extends BoardPiece{
         })
 
         return true;
-        
     }
 
     placePiece(row, column, board, pieceLayoutId){
+        let relativeTilePlacementCoordinates = [];
         switch(pieceLayoutId){
             case 0:
                 //Place tiles
+                relativeTilePlacementCoordinates = [
+                    [0, -1],
+                    [1, 0],
+                    [0, 1],
+                    [1, 0],
+                    [2, 0]
+                ]
                 
                 break;
             case 1:
-
+                relativeTilePlacementCoordinates = [
+                    [-1, -1],
+                    [-1, 0],
+                    [-1, -1],
+                    [1, 0],
+                    [2, 0]
+                ]
                 break;
-            //...
+            //these are all now just pairs with columns flipped. could have made that a function/parameter combo. oh well.
+            case 2:
+                //Place tiles
+                relativeTilePlacementCoordinates = [
+                    [-1, -1],
+                    [0, -1],
+                    [1, 1],
+                    [1, 0],
+                    [2, 0]
+                ]
+                
+                break;
+            case 3:
+                relativeTilePlacementCoordinates = [
+                    [-1, 1],
+                    [0, 1],
+                    [1, -1],
+                    [1, 0],
+                    [2, 0]
+                ]
+                break;
+            case 4:
+                //Place tiles
+                relativeTilePlacementCoordinates = [
+                    [-1, -1],
+                    [-1, 0],
+                    [1, 0],
+                    [2, 0],
+                    [2, 1]
+                ]
+                
+                break;
+            case 5:
+                relativeTilePlacementCoordinates = [
+                    [-1, 1],
+                    [-1, 0],
+                    [1, 0],
+                    [2, 0],
+                    [2, -1]
+                ]
+                break;
+            case 6:
+                //Place tiles
+                relativeTilePlacementCoordinates = [
+                    [-1, -1],
+                    [0, -1],
+                    [1, 0],
+                    [1, 1],
+                    [2, 1]
+                ]
+                
+                break;
+            case 7:
+                relativeTilePlacementCoordinates = [
+                    [-1, 1],
+                    [0, 1],
+                    [1, 0],
+                    [1, -1],
+                    [2, -1]
+                ]
+                break;
+            case 8:
+                //Place tiles
+                relativeTilePlacementCoordinates = [
+                    [-2, 0],
+                    [-1, 0],
+                    [0, -1],
+                    [1, -1],
+                    [2, -1]
+                ]
+                
+                break;
+            case 9:
+                relativeTilePlacementCoordinates = [
+                    [-2, 0],
+                    [-1, 0],
+                    [0, 1],
+                    [1, 1],
+                    [2, 1]
+                ]
+                break;
 
             default:
                 //TODO
+                pass;
         }
+        this.place(row, column, board, rotation, relativeTilePlacementCoordinates);
     }
     
     summon(row, column, board, pieceLayoutId){
